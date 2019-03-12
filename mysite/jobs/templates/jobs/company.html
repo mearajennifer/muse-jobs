@@ -1,0 +1,16 @@
+<div>
+  <h1>{{ job.company.company_name }}</h1>
+  {% load static %}
+    <img src="{% static job.company.company_logo %}" alt="{{ job.company.company_name }} logo">
+</div>
+
+<div>  
+  <p>{{ job.company.company_desc }}</p>
+</div>
+
+<div>
+  <h3>Current openings:</h3>
+  <ul>
+    <li></li>
+  </ul>
+</div>

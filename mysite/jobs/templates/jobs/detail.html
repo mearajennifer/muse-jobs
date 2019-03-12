@@ -1,0 +1,16 @@
+<div>
+  <h1>{{ job.job_title }}</h1>
+  <button><a href="{{ job.job_link }}">Apply now</a></button>
+</div>
+
+<div>
+  {% load static %}
+  <a href="/jobs/company/{{ job.company.id }}/">
+    <img src="{% static job.company.company_logo %}" alt="{{ job.company.company_name }} logo">
+  </a>
+  
+  <h3>Organization: <a href="/jobs/company/{{ job.company.id }}/">{{ job.company.company_name }}</a></h3>
+  <h3>Location: {{ job.job_city }}, {{ job.job_state}}</h3>
+  <p>{{ job.company.company_desc }}</p>
+  <p>{{ job.job_description }}</p>
+</div>

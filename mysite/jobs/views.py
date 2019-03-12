@@ -16,7 +16,7 @@ class JobsView(generic.ListView):
         Return the last five published questions (not including those set to be
         published in the future).
         """
-        return Job.objects.query.all()
+        return Job.objects.filter().all()
 
 
 class JobDetailView(generic.DetailView):
@@ -27,9 +27,15 @@ class JobDetailView(generic.DetailView):
         """
         Excludes any questions that aren't published yet.
         """
-        return Job.objects.query.all()
+        return Job.objects.filter().all()
 
 
 class CompanyDetailView(generic.DetailView):
     model = Company
     template_name = 'jobs/company.html'
+
+    def get_queryset(self):
+        """
+        Excludes any questions that aren't published yet.
+        """
+        return Job.objects.filter().all()
