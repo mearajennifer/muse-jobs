@@ -2,21 +2,17 @@
 
 {% block content %}
 
-  <div>
-    <h1>{{ job.company.company_name }}</h1>
-    {% load static %}
-      <img src="{% static job.company.company_logo %}" alt="{{ job.company.company_name }} logo">
+  <div class="position-relative overflow-hidden text-center">
+    <div class="mx-auto mt-4">
+      <h1 class="header-name display-4 font-weight-normal">{{ company.company_name }}</h1>
+      {% load static %}
+      <img src="{% static company.company_logo %}" alt="{{ company.company_name }} logo">
+    </div>
   </div>
 
-  <div>  
-    <p>{{ job.company.company_desc }}</p>
-  </div>
-
-  <div>
-    <h3>Current openings:</h3>
-    <ul>
-      <li></li>
-    </ul>
+  <div class="pl-md-3 container font-weight-normal p-3">
+    <h5>About {{ company.company_name }}</h5>
+    <p>{{ company.company_desc|linebreaksbr }}</p>
   </div>
 
 {% endblock %}

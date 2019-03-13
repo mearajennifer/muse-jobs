@@ -1,0 +1,72 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+.container {
+  max-width: 960px;
+}
+
+.site-header {
+  background-color: #1f2e48;
+}
+.site-header a {
+  color: white;
+  transition: ease-in-out color .15s;
+}
+.site-header a:hover {
+  color: #82a5cf;
+}
+
+.header-name {
+  font-family: 'Pacifico', cursive;
+  color: #1f2e48;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+.wrapper a {
+  color: #1f2e48;
+}
+.wrapper a:hover {
+  color: #82a5cf;
+}
+
+.btn-round{
+  border-radius: 22.5px;
+  margin-top: 2rem;
+}
+
+footer {
+  color: #1f2e48;
+  background-color: #1f2e48;
+  color: white;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+footer h4 {
+  font-family: 'Pacifico', cursive;
+}
+
+
+/*
+ * Extra utilities
+ */
+
+/*.flex-equal > * {
+  -ms-flex: 1;
+  flex: 1;
+}
+@media (min-width: 768px) {
+  .flex-md-equal > * {
+    -ms-flex: 1;
+    flex: 1;
+  }
+}*/
+
+.overflow-hidden { overflow: hidden; }
