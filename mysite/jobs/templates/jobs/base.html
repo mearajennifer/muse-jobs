@@ -19,24 +19,29 @@
 
     <body>
 
-      <nav class="site-header sticky-top py-2">
-        <div class="container d-flex flex-column flex-md-row justify-content-between">
-          <a class="py-2 d-none d-md-inline-block" href="{% url 'jobs:jobs' %}">Jobs</a>
-          <a class="py-2 d-none d-md-inline-block" href="{% url 'jobs:companies' %}">Companies</a>
-          <a class="py-2 d-none d-md-inline-block" href="{% url 'jobs:about-us' %}">About Us</a>
-        </div>
-      </nav>
+      <main class="main">
 
-      {% block content %}
-      {% endblock %}
+        <nav class="site-header sticky-top py-2">
+          <div class="container d-flex flex-column flex-md-row justify-content-between">
+            <a class="py-2 d-none d-md-inline-block" href="{% url 'jobs:jobs' %}">Jobs</a>
+            <a class="py-2 d-none d-md-inline-block" href="{% url 'jobs:companies' %}">Companies</a>
+            <a class="py-2 d-none d-md-inline-block" href="{% url 'jobs:about-us' %}">About Us</a>
+          </div>
+        </nav>
+
+        {% block content %}
+        {% endblock %}
+
+      </main>
+      <footer class="container-flex py-3 text-center relative-bottom">
+            <p class="lead">
+              All our dreams can come true, if we have the courage to pursue them.
+            </p>
+            <h4>-Walt Disney</h4>
+      </footer>
 
     </body>
 
-    <footer class="container-flex py-3 text-center fixed-bottom">
-          <p class="lead">
-            All our dreams can come true, if we have the courage to pursue them.
-          </p>
-          <h4>-Walt Disney</h4>
-    </footer>
+
 
 </html>
