@@ -3,14 +3,48 @@
 {% block content %}
 
   <div class="position-relative overflow-hidden text-center">
+    
     <div class="mx-auto mt-4">
-      <h1 class="header-name display-4 font-weight-normal">{{ company.company_name }}</h1>
+
       {% load static %}
       <img class="company-logo" src="{% static company.company_logo %}" alt="{{ company.company_name }} logo">
+      
+      <div class="row social-media text-center">
+        {% if company.linkedin %}
+          <a href="https://www.linkedin.com/{{ company.linkedin }}" target="_blank">
+            {% load static %}
+            <img class="social-icons" src="{% static '/jobs/img/i_linkedin.jpeg' %}" alt="LinkedIn">
+          </a>
+
+        {% endif %}
+
+        {% if company.facebook %}
+          <a href="https://www.facebook.com/{{ company.facebook }}/" target="_blank">
+            {% load static %}
+            <img class="social-icons" src="{% static '/jobs/img/i_facebook.png' %}" alt="Facebook">
+          </a>
+        {% endif %}
+
+        {% if company.twitter %}
+          <a href="https://www.twitter.com/{{ company.twitter }}" target="_blank">
+            {% load static %}
+            <img class="social-icons" src="{% static '/jobs/img/i_twitter.png' %}" alt="Twitter">
+          </a>
+        {% endif %}
+
+        {% if company.youtube %}
+          <a href="https://www.youtube.com/{{ company.youtube }}" target="_blank">
+            {% load static %}
+            <img class="social-icons" src="{% static '/jobs/img/i_youtube.png' %}" alt="YouTube">
+          </a>
+        {% endif %}
+
+      </div>
+
     </div>
   </div>
 
-  <div class="pl-md-3 container font-weight-normal p-3">
+  <div class="about pl-md-3 container font-weight-normal p-3">
     <h5>About {{ company.company_name }}</h5>
     <p>{{ company.company_desc|linebreaksbr }}</p>
   </div>
